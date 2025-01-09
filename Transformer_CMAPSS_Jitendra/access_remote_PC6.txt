@@ -1,0 +1,37 @@
+eduvpn download client
+
+PC number 6: 10.162.89.88 -p3632
+PC number 5: 10.162.89.192 -p3632 
+pw: ERATUM2017
+
+remotely connect via
+ssh eragroup@10.162.89.88 -p3632
+ssh eragroup@10.162.89.192 -p3632 
+
+tmux for sessions
+create tumux new session: tmux new -s sessname
+detach from session: ctrl+b d
+
+connect to remote jupyter notebook:
+1. launch remotely jupyter notebook with specific port
+jupyter notebook --no-browser --port=8000
+copy the access token
+
+2. stream remote port 9000 to your own local port 1234
+ssh -N -f -L 1234:localhost:8000 eragroup@10.162.89.88 -p3632
+
+3. simply access your own localhost port 1234 in your browser and paste in the remote notebook token
+
+file exchange via scp: -r flag if you want to copy a whole folder
+scp -r -P 3632 ./Codes eragroup@10.162.89.88:/home/eragroup/Documents/Documents/.../fill_in_your_path
+
+
+To transfer file from TUM server to Laptop(local Machine): scp -r -P 3632 eragroup@10.162.89.88:/home/eragroup/Documents/Documents/Koutas_Master_Thesis_Supervision/Jitendra_Tiwari/Transformer_jitendra_18.09.2024 ./Transformer_jitendra_18.09.2024
+
+To transfer file from Laptop(local Machine) to  TUM server : scp -r -P 3632 ./Transformer_jitendra_18.09.2024 eragroup@10.162.89.88:/home/eragroup/Documents/Documents/Koutas_Master_Thesis_Supervision/Jitendra_Tiwari
+
+
+PC reservation:
+https://wiki.tum.de/pages/viewpage.action?pageId=442500558
+
+

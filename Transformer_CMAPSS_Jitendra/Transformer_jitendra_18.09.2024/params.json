@@ -1,0 +1,15 @@
+{
+    "input_dim": 25,
+    "model_dim": 32,
+    "num_heads": 4,
+    "num_layers": 4,
+    "seq_length": 50,
+    "num_classes": 3,
+    "dropout_rate": 0.18348281502851804,
+    "learning_rate": 0.0006244024836879346,
+    "batch_size": 8,
+    "num_epochs": 30,
+    "weight_decay": 9.19328952083296e-05,
+    "patience": 5,
+    "gradient_accumulation_steps": 12
+}
