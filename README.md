@@ -1,6 +1,6 @@
 # Predictive-Maintenance-Turbojet-Engine
-Analyzed the CMAPSS data provided by NASA and applied predictive maintenance algorithms. Transformer deep learning architecture has been chosen to train on time series datasets of CMAPSS, and Predictive maintenance algorithms have been taken from the paper of Antonios Kamariotis's paper "A metric for assessing and optimizing data-driven prognostic algorithms for
-predictive maintenance." The predictive maintenance algorithms implement the following. 
+Analyzed the C-MAPSS data provided by NASA and applied predictive maintenance algorithms. vanilla transformer architecture has been used to process the multivariate time series data from the C-MAPSS aircraft engine simulator to output the estimated remaining life of a component and then apply a heuristic maintenance strategy using the transformer's test data output as input. Predictive maintenance algorithms have been taken from the paper of Antonios Kamariotis's paper "A metric for assessing and optimizing data-driven prognostic algorithms for predictive maintenance." The predictive maintenance algorithms implement the following. 
+
 # PDM Policy1
 
 1. `Policy Overview:` We first consider the simple dynamic PdM decision setting, in which one determines at each time step
