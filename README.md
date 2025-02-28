@@ -119,8 +119,8 @@ and The sum calculates the expected time if failure occurs before T_R_k.<br>
 # PDM Policy 3 
 1. `Objective: `PDM Policy 3 represents a significant advancement in predictive maintenance by utilizing the full distribution of RUL data to inform maintenance decisions. The objective function captures both the expected costs of preventive and corrective actions and the additional costs associated with early replacements, providing a comprehensive framework for optimizing maintenance strategies. <br>
 2. `Explanation of Equation(14): ` The equation for the objective function in PDM Policy 3 is given as:
->
-$$f\left(T_{\mathrm{R}, k}\right)=P_{\mathrm{PR}} \cdot C_{\mathrm{p}}+\left(1-P_{\mathrm{PR}}\right) \cdot C_{\mathrm{c}}+\int_{T_{\mathrm{R}, k}}^{\infty}\left(t-T_{\mathrm{R}, k}\right) \cdot \frac{\mathrm{E}_{\bar{T}_{\mathrm{F}}}\left[C_{\mathrm{rep}}\right]}{\mathrm{E}_{\bar{T}_{\mathrm{F}}}\left[T_{l \mathrm{c}}\right]} f_{R U L_{\mathrm{pred}, k}}\left(t-t_k\right) \mathrm{d} t$$
+>>
+$f\left(T_{\mathrm{R}, k}\right)=P_{\mathrm{PR}} \cdot C_{\mathrm{p}}+\left(1-P_{\mathrm{PR}}\right) \cdot C_{\mathrm{c}}+\int_{T_{\mathrm{R}, k}}^{\infty}\left(t-T_{\mathrm{R}, k}\right) \cdot \frac{\mathrm{E}_{\bar{T}_{\mathrm{F}}}\left[C_{\mathrm{rep}}\right]}{\mathrm{E}_{\bar{T}_{\mathrm{F}}}\left[T_{l \mathrm{c}}\right]} f_{R U L_{\mathrm{pred}, k}}\left(t-t_k\right) \mathrm{d} t$
 
 3. `Components of the equation: `
 
@@ -132,7 +132,8 @@ $$f\left(T_{\mathrm{R}, k}\right)=P_{\mathrm{PR}} \cdot C_{\mathrm{p}}+\left(1-P
 > 2. `Integral Term: `
 >> * The integral term quantifies the additional expected maintenance cost associated with an "early" replacement at $T_{\mathrm{R}, k}$ <br>
 >> * The expression $ \left(t-T_{\mathrm{R}, k}\right) $ represents the time lost due to an early replacement.
->> * The term* $$ \frac{\mathrm{E}_{\bar{T}_{\mathrm{F}}}\left[C_{\mathrm{rep}}\right]}{\mathrm{E}_{\bar{T}_{\mathrm{F}}}\left[T_{l \mathrm{c}}\right]} $$  is the long-run expected maintenance cost per unit time concerning the distribution of the population of components. It provides a scaling factor for the additional cost incurred by replacing the component early. <br> 
+>> * The term* $ \left(t-T_{\mathrm{R}, k}\right) $ represents the time lost due to an early replacement.
+>> * The term $ \frac{\mathrm{E}_{\bar{T}_{\mathrm{F}}}\left[C_{\mathrm{rep}}\right]}{\mathrm{E}_{\bar{T}_{\mathrm{F}}}\left[T_{l \mathrm{c}}\right]} $  is the long-run expected maintenance cost per unit time concerning the distribution of the population of components. It provides a scaling factor for the additional cost incurred by replacing the component early. <br> 
 >> * $ f_{R U L_{\mathrm{pred}, k}}\left(t-t_k\right) $is the predicted probability density function of the RUL, representing the likelihood of failure occurring at time t after the current cycle $t_k$
 
 
